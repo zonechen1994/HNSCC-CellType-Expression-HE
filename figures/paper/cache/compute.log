@@ -1,0 +1,82 @@
+cell types: ['Malignant', 'B cell', 'Dendritic', 'Endothelial', 'Fibroblast', 'Macrophage', 'Mast', 'T cell']
+[1] internal expression PCC (coef_slope.txt)
+  Malignant    top1000=0.510 full=0.267 >0.4:3002
+  B cell       top1000=0.356 full=0.233 >0.4:167
+  Dendritic    top1000=0.336 full=0.200 >0.4:64
+  Endothelial  top1000=0.507 full=0.257 >0.4:2745
+  Fibroblast   top1000=0.507 full=0.261 >0.4:2834
+  Macrophage   top1000=0.430 full=0.185 >0.4:883
+  Mast         top1000=0.256 full=0.120 >0.4:22
+  T cell       top1000=0.399 full=0.266 >0.4:490
+  cached expr_internal
+  cached expr_cptac
+[2] example high-PCC gene scatters
+  Malignant    ARHGEF26  PCC=0.678  n=442
+  Fibroblast   ARHGEF26  PCC=0.682  n=442
+  T cell       RIPPLY3  PCC=0.516  n=442
+  cached expr_examples
+[3] abundance Spearman (cell_fraction_preds)
+  Malignant    rho=0.273
+  B cell       rho=0.282
+  Dendritic    rho=0.147
+  Endothelial  rho=0.150
+  Fibroblast   rho=0.425
+  Macrophage   rho=0.311
+  Mast         rho=0.225
+  T cell       rho=0.286
+  cached abundance_internal
+[4] transfer QC (CPTAC pred vs theta)
+  Malignant    r=0.387
+  B cell       r=0.314
+  Dendritic    r=0.368
+  Endothelial  r=0.268
+  Fibroblast   r=0.511
+  Macrophage   r=0.441
+  Mast         r=0.074
+  T cell       r=0.131
+  cached transfer_cptac
+[5] IHC (HANCOCK pred T cell vs CD3/CD8)
+  CD3_density: rho=0.351 p=9.7e-22 n=699
+  CD8_density: rho=0.415 p=1.8e-30 n=700
+  cached ihc
+[6] survival Cox + KM
+  hancock_os: n=701 T-cell HR=0.82 Macro HR=0.73
+  hancock_dss: n=701 T-cell HR=0.76 Macro HR=0.72
+  tcga_os: n=407 T-cell HR=0.75
+  cached survival_cox
+  KM Macrophage: logrank p=0.0000
+  KM T cell: logrank p=0.0622
+  cached km_hancock
+  T cell       HPV+ vs -: median 0.011/0.005 p=1.7e-14
+  Dendritic    HPV+ vs -: median 0.005/-0.002 p=3.3e-15
+  B cell       HPV+ vs -: median 0.044/0.026 p=6.0e-11
+  Macrophage   HPV+ vs -: median 0.042/0.029 p=1.1e-11
+  cached abundance_by_hpv
+[7] multivariable nested Cox
+  TCGA T cell (OS, real θ): uni=0.75 +clin=0.74 +HPV=0.74
+  HANCOCK T cell (OS): uni=0.82 +clin=0.81 +HPV=0.87
+  HANCOCK Macrophage (OS): uni=0.73 +clin=0.83 +HPV=0.90
+  cached multivariable
+[8] S1 baseline vs new reference
+    cell_type  top1000_PCC  genes>0.4  mean_abund%  nonzero%
+0   Malignant        0.515       2899        78.88     100.0
+1  Fibroblast        0.496       2279        10.76      98.0
+2      B cell        0.085          0         0.02       7.0
+3     myocyte        0.310         83         1.24      37.0
+4  Macrophage        0.437        904         1.40      86.0
+  saved s1_baseline.csv
+
+=== CHEAP BLOCKS DONE. Starting HPV external (GPU) ===
+  device cuda:0
+  Malignant    int AUC=0.842 ext AUC=0.829 (n=312,HPV+=131)
+  B cell       int AUC=0.816 ext AUC=0.818 (n=312,HPV+=131)
+  Dendritic    int AUC=0.841 ext AUC=0.837 (n=312,HPV+=131)
+  Endothelial  int AUC=0.845 ext AUC=0.833 (n=312,HPV+=131)
+  Fibroblast   int AUC=0.834 ext AUC=0.831 (n=312,HPV+=131)
+  Macrophage   int AUC=0.834 ext AUC=0.832 (n=312,HPV+=131)
+  Mast         int AUC=0.836 ext AUC=0.824 (n=312,HPV+=131)
+  T cell       int AUC=0.848 ext AUC=0.832 (n=312,HPV+=131)
+  ENSEMBLE int AUC=0.845 (0.77-0.91) | ext AUC=0.831 (0.78-0.88)
+  cached hpv_percell_auc
+
+=== ALL DONE ===

@@ -1,0 +1,82 @@
+{
+ "Malignant": {
+  "tcga": 2686,
+  "cptac": 667,
+  "universe": 19352,
+  "shared": 444,
+  "tcga_only": 2242,
+  "cptac_only": 223,
+  "p": 2.58e-225,
+  "jaccard": 0.153
+ },
+ "B cell": {
+  "tcga": 103,
+  "cptac": 29,
+  "universe": 18353,
+  "shared": 2,
+  "tcga_only": 101,
+  "cptac_only": 27,
+  "p": 0.0115,
+  "jaccard": 0.015
+ },
+ "Dendritic": {
+  "tcga": 35,
+  "cptac": 347,
+  "universe": 15598,
+  "shared": 5,
+  "tcga_only": 30,
+  "cptac_only": 342,
+  "p": 0.000993,
+  "jaccard": 0.013
+ },
+ "Endothelial": {
+  "tcga": 2468,
+  "cptac": 594,
+  "universe": 19265,
+  "shared": 419,
+  "tcga_only": 2049,
+  "cptac_only": 175,
+  "p": 7.52e-243,
+  "jaccard": 0.159
+ },
+ "Fibroblast": {
+  "tcga": 2529,
+  "cptac": 637,
+  "universe": 19274,
+  "shared": 456,
+  "tcga_only": 2073,
+  "cptac_only": 181,
+  "p": 4.12e-265,
+  "jaccard": 0.168
+ },
+ "Macrophage": {
+  "tcga": 646,
+  "cptac": 234,
+  "universe": 18973,
+  "shared": 99,
+  "tcga_only": 547,
+  "cptac_only": 135,
+  "p": 3.9e-83,
+  "jaccard": 0.127
+ },
+ "Mast": {
+  "tcga": 12,
+  "cptac": 34,
+  "universe": 12174,
+  "shared": 5,
+  "tcga_only": 7,
+  "cptac_only": 29,
+  "p": 9.76e-11,
+  "jaccard": 0.122
+ },
+ "T cell": {
+  "tcga": 284,
+  "cptac": 314,
+  "universe": 16781,
+  "shared": 30,
+  "tcga_only": 254,
+  "cptac_only": 284,
+  "p": 1.61e-14,
+  "jaccard": 0.053
+ }
+}

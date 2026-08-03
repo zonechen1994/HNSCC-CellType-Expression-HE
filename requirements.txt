@@ -1,0 +1,27 @@
+# Python 3.12
+
+# --- Redrawing the figures from the bundled cache (no GPU, no data needed) ---
+numpy==2.2.6
+pandas==2.2.3
+scipy==1.16.3
+scikit-learn==1.8.0
+lifelines==0.30.3
+scikit-survival==0.27.0
+gseapy==1.1.12
+matplotlib>=3.8
+
+# --- Running the per-figure notebooks ---
+jupyter
+nbconvert>=7
+nbformat>=5
+
+# --- Full pipeline from raw data (deconvolution, training, applying the model) ---
+# torch==2.6.0
+# torchvision==0.21.0
+# scanpy==1.11.5
+# anndata
+# openslide-python==1.4.3
+# opencv-python
+# staintools==2.1.2
+# cptac==1.5.14
+# (R 4.4 with BayesPrism 2.2.3 is also required for the deconvolution step)

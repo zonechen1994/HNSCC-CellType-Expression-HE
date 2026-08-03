@@ -1,0 +1,5 @@
+cell,n_top,n_repl,repl
+Malignant,5,4,DNA Metabolic Process (GO:0006259); Double-Strand Break Repair Via Homologous Recombination (GO:0000724); DNA Damage Response (GO:0006974); Double-Strand Break Repair (GO:0006302)
+Endothelial,5,5,DNA Metabolic Process (GO:0006259); DNA Damage Response (GO:0006974); DNA Repair (GO:0006281); Double-Strand Break Repair Via Homologous Recombination (GO:0000724); Double-Strand Break Repair (GO:0006302)
+Fibroblast,5,5,DNA Metabolic Process (GO:0006259); Double-Strand Break Repair Via Homologous Recombination (GO:0000724); DNA Damage Response (GO:0006974); DNA Repair (GO:0006281); Double-Strand Break Repair (GO:0006302)
+Macrophage,5,4,Peptide Cross-Linking (GO:0018149); Keratinocyte Differentiation (GO:0030216); Skin Development (GO:0043588); Epidermis Development (GO:0008544)

@@ -1,0 +1,10 @@
+cell_type,top1000_PCC,genes>0.4,mean_abund%,nonzero%
+Malignant,0.515,2899,78.88,100.0
+Fibroblast,0.496,2279,10.76,98.0
+B cell,0.085,0,0.02,7.0
+myocyte,0.31,83,1.24,37.0
+Macrophage,0.437,904,1.4,86.0
+Endothelial,0.507,2655,6.14,100.0
+T cell,0.468,1494,1.41,91.0
+Dendritic,0.163,3,0.13,10.0
+Mast,0.263,8,0.02,2.0

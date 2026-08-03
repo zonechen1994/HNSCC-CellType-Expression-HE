@@ -1,0 +1,13 @@
+config.env
+# maintainer-only publish notes, kept local
+UPLOAD_CHECKLIST.md
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+# large artifacts hosted on Baidu Netdisk (see DATA.md), not in git
+run/*/results/
+*.svs
+*.tif
+*.tiff
+*.ndpi

@@ -1,0 +1,10 @@
+{
+ "Malignant": 0.417,
+ "B cell": 0.325,
+ "Dendritic": 0.377,
+ "Endothelial": 0.413,
+ "Fibroblast": 0.417,
+ "Macrophage": 0.358,
+ "Mast": 0.232,
+ "T cell": 0.38
+}
