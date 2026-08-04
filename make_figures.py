@@ -26,7 +26,6 @@ STEPS = [
     ("Figure S4",        "figures/paper/prognosis_plot.py"),
     ("Figure S5",        "figures/paper/interp_flagship_plot.py"),
     ("Figure S6",        "figures/paper/go_two_cohorts_plot.py"),
-    ("Figure 1 icons",   "figures/paper/fig1_icon_heatmap.py"),
 ]
 
 print(f"HNSC_ROOT = {ROOT}\n")
