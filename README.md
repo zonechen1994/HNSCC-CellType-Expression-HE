@@ -11,7 +11,8 @@
     figures/paper/                    scripts that compute the cached statistics and draw every figure
     figures/paper/cache/              the cached outputs of every analysis, so that all figures can be
                                       redrawn without a GPU and without the models
-    code/SLIDE_EX_code/               the model itself and the whole-slide processing code
+    code/SLIDE_EX_code/               the SLIDE-EX prediction model (Wang et al. 2026, see
+                                      Attribution below) and the whole-slide processing code
     requirements.txt                  Python dependencies
 
 ## Setting the root directory
@@ -95,3 +96,29 @@ weights are obtained from the original authors and are not redistributed here.
 TCGA-HNSC and CPTAC-HNSCC are public, HANCOCK is available from its own authors, and the
 single-cell reference is public. The derived artifacts (predictions and tile features) are on
 Baidu Netdisk. See `DATA.md` for every link and the exact place to put each file.
+
+## Attribution
+
+This repository accompanies our own study of head and neck squamous cell carcinoma. It builds on
+two pieces of previously published work, and we gratefully acknowledge both.
+
+**SLIDE-EX.** The prediction model under `code/SLIDE_EX_code/` is SLIDE-EX, introduced by Wang et
+al., *npj Precision Oncology*, 2026 (doi:10.1038/s41698-026-01419-9). We did not develop this
+model; we apply it, and we thank its authors for making their code available.
+`code/SLIDE_EX_code/README.md` records file by file what came from them and what we added.
+Two analyses also follow theirs by design, so that our results can be compared
+with the original report on a like-for-like basis: the GO enrichment across cohorts
+(`scripts/go_enrichment_two_cohorts.py`) and its figure (`figures/paper/go_two_cohorts_plot.py`)
+are aligned with their Fig. 5.
+
+**CTransPath.** Tile features come from the CTransPath encoder (Wang et al., *Medical Image
+Analysis*, 2022, https://github.com/Xiyue-Wang/TransPath). The weights belong to those authors and
+are not redistributed here; see `DATA.md`.
+
+**What is ours.** The contribution of this study is the application to head and neck cancer and
+everything built around it: the oropharyngeal single-cell reference and the BayesPrism
+deconvolution that produces cell type-specific training labels, the three-cohort design across
+TCGA-HNSC, CPTAC-HNSCC and HANCOCK with the external-validation pipeline, the parallel CTransPath
+feature extraction in `code/SLIDE_EX_code/SLIDE_EX_code/slide_processing/`, and all downstream
+analyses reported in the paper, including HPV status prediction, the survival and multivariable
+Cox models, the immune and cell-communication analyses, and every figure and table.
