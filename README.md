@@ -19,7 +19,7 @@
 Every script resolves paths from the environment variable `HNSC_ROOT`, falling back to the
 directory used during development. Set it to wherever this package is unpacked:
 
-    export HNSC_ROOT=/path/to/HNSC_code
+    export HNSC_ROOT=/path/to/HNSCC-CellType-Expression-HE
 
 Or copy the provided template and load it, which also sets the CTransPath weights path:
 
@@ -31,7 +31,7 @@ repository. See `DATA.md` for the Baidu Netdisk link and where to unpack each on
 
 ## Redrawing every figure with one command
 
-    export HNSC_ROOT=/path/to/HNSC_code
+    export HNSC_ROOT=/path/to/HNSCC-CellType-Expression-HE
     python make_figures.py
 
 This runs all nine plotting steps and takes about 75 seconds on a laptop. It needs no GPU, no

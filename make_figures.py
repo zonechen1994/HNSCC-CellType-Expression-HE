@@ -2,7 +2,7 @@
 """Redraw every figure and table in the paper from the bundled cache.
 
 Usage:
-    export HNSC_ROOT=/path/to/HNSC_code      # or run from inside the package
+    export HNSC_ROOT=/path/to/HNSCC-CellType-Expression-HE      # or run from inside the package
     python make_figures.py
 
 Nothing here needs a GPU, the trained models, or the whole-slide images. Every number is read

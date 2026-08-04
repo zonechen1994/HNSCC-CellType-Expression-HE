@@ -16,7 +16,7 @@ Everything is in a single archive, `HNSC_data.tar` (about 16 GB). Its folders al
 repository, so you just extract it **into the repository root** and every file lands where the code
 expects it. No renaming, no moving:
 
-    export HNSC_ROOT=/path/to/HNSC_code
+    export HNSC_ROOT=/path/to/HNSCC-CellType-Expression-HE
     tar -xf HNSC_data.tar -C "$HNSC_ROOT"
 
 That places:
