@@ -81,7 +81,7 @@ for k,nm in enumerate(names):
     short=nm.replace(" Signaling","").replace("Epithelial Mesenchymal Transition","EMT").replace(" Response","")[:16]
     _elo,_ehi=rho_ci(e['rho'],PATH['n']); _ep=stats.spearmanr(e['pred'],e['true'])[1]
     _eps=("P < 1e-300" if not (_ep>0) else (f"P = {_ep:.3f}" if _ep>=0.001 else "P = "+f"{_ep:.0e}".replace("e-0","e-").replace("e+0","e+")))
-    ax.set_title(f"{short}\nr={e['rho']:.2f} ({_elo:.2f}\u2013{_ehi:.2f})\n{_eps}",fontsize=6.1)
+    ax.set_title(f"{short}\nr={e['rho']:.3f} ({_elo:.3f}\u2013{_ehi:.3f})\n{_eps}",fontsize=6.1)
     ax.set_xticks([]); ax.set_yticks([])
     ax.set_xlabel("predicted\nline: OLS fit, shaded: 95% CI" if k==1 else "predicted",fontsize=6.3)
     if k==0: ax.set_ylabel("measured",fontsize=6.5); tag(ax,"c")

@@ -137,7 +137,7 @@ def _pf(pp):
 rr,_rcp=pearsonr(sx,sy)
 _ng=len(sx); _z=np.arctanh(np.clip(rr,-0.999,0.999)); _se=1/np.sqrt(max(_ng-3,1))
 _rlo=np.tanh(_z-1.96*_se); _rhi=np.tanh(_z+1.96*_se)
-rbox(axd,0.03,0.96,f"r = {rr:.2f}\n95% CI {_rlo:.2f}–{_rhi:.2f}\n{_pf(_rcp)}",fc="#fff5ec",ec=PAL["risk"])
+rbox(axd,0.03,0.96,f"r = {rr:.3f}\n95% CI {_rlo:.3f}–{_rhi:.3f}\n{_pf(_rcp)}",fc="#fff5ec",ec=PAL["risk"])
 axd.axhline(0,color="#ccc",lw=0.6); axd.axvline(0.4,color="#777",lw=0.8,ls=":")
 axd.set_xlabel("Measured mRNA-protein PCC\nline: OLS fit, band: 95% CI of the fit")
 axd.set_ylabel("Predicted (whole-tumor)\nvs protein PCC")
@@ -163,7 +163,7 @@ for k,e in enumerate(C["examples"]):
     _m=~(np.isnan(p)|np.isnan(o)); _n=int(_m.sum()); _mp=pearsonr(p[_m],o[_m])[1]
     _z=np.arctanh(np.clip(e['r'],-0.999,0.999)); _se=1/np.sqrt(max(_n-3,1))
     _rlo=np.tanh(_z-1.96*_se); _rhi=np.tanh(_z+1.96*_se)
-    rbox(ax,0.04,0.97,f"r = {e['r']:.2f}\n95% CI {_rlo:.2f}–{_rhi:.2f}\n{_pf(_mp)}",fc="#fbeff2",ec=PAL["cptac"],fs=5.6)
+    rbox(ax,0.04,0.97,f"r = {e['r']:.3f}\n95% CI {_rlo:.3f}–{_rhi:.3f}\n{_pf(_mp)}",fc="#fbeff2",ec=PAL["cptac"],fs=5.6)
     ax.set_xlabel("Predicted expression (log CPM)\nband: 95% CI of the fit",fontsize=7)
     if k==0:
         ax.set_ylabel("Measured protein (z-score)",fontsize=7); tag(ax,"d")

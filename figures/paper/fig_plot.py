@@ -106,7 +106,7 @@ def fig2():
         _r,_rlo,_rhi,_rp=r_ci_p(o,p)   # r + bootstrap 95% CI + P, 从实际散点算保证标签=点
         _cp=e.get("compartment","")
         axb.set_title(f"{e['gene']}\n{_cp} ({e['ct']})",fontsize=7.2,fontweight="bold")
-        axb.text(0.05,0.985,f"r = {_r:.2f} ({_rlo:.2f}\u2013{_rhi:.2f})\n{_pfmt(_rp)}",transform=axb.transAxes,fontsize=5.6,va="top",ha="left",
+        axb.text(0.05,0.985,f"r = {_r:.3f} ({_rlo:.3f}\u2013{_rhi:.3f})\n{_pfmt(_rp)}",transform=axb.transAxes,fontsize=5.6,va="top",ha="left",
                  bbox=dict(boxstyle="round,pad=0.28",fc="#ffffff",ec=PAL["tcga"],lw=0.7))
         axb.set_xlabel("Deconvolved expr (observed)",fontsize=7)
         if k==0: axb.set_ylabel("Predicted expr",fontsize=7)
@@ -206,7 +206,7 @@ def fig2():
         _cp=e.get("compartment","")
         axg.set_title(f"{e['gene']}"+(f"\n{_cp} ({e['ct']})" if _cp else ""),fontsize=7.2,fontweight="bold")
         _gr,_glo,_ghi,_gp=r_ci_p(p,o)
-        axg.text(0.05,0.985,f"r = {_gr:.2f} ({_glo:.2f}\u2013{_ghi:.2f})\n{_pfmt(_gp)}",transform=axg.transAxes,fontsize=5.6,va="top",ha="left",
+        axg.text(0.05,0.985,f"r = {_gr:.3f} ({_glo:.3f}\u2013{_ghi:.3f})\n{_pfmt(_gp)}",transform=axg.transAxes,fontsize=5.6,va="top",ha="left",
                  bbox=dict(boxstyle="round,pad=0.28",fc="#ffffff",ec=PAL["cptac"],lw=0.7))
         axg.set_xlabel("Predicted expr",fontsize=7)
         if k==0: axg.set_ylabel("Measured protein",fontsize=7); panel_tag(axg,"f")

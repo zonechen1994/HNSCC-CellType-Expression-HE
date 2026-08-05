@@ -49,7 +49,7 @@ for k,mk in enumerate(["CD3_density","CD8_density"]):
     ax.fill_between(xs,lo,hi,color=PAL["risk"],alpha=0.30,linewidth=0)
     for _yb in (lo, hi):   # 带宽随 n 收缩, 加细边界线保证可见
         ax.plot(xs, _yb, color=PAL["risk"], lw=0.45, alpha=0.85, zorder=1)
-    ax.set_title(f"{mk.split('_')[0]}: predicted T-cell vs IHC density\nr={d['rho']:.2f} (95% CI {_clo:.2f}–{_chi:.2f}), p<1e-20, n={d['n']}",fontsize=8)
+    ax.set_title(f"{mk.split('_')[0]}: predicted T-cell vs IHC density\nr={d['rho']:.3f} (95% CI {_clo:.3f}–{_chi:.3f}), p<1e-20, n={d['n']}",fontsize=8)
     ax.set_xlabel("Predicted T-cell abundance (WSI)\nline: OLS fit, band: 95% CI of the fit",fontsize=7.5)
     ax.set_ylabel("TMA IHC density (cells/mm²)",fontsize=7.5)
     tag(ax,"ab"[k])
