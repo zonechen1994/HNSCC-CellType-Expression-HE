@@ -1,4 +1,4 @@
-# Code for "Cell type-specific gene expression inferred from H&E histopathology by deep learning predicts HPV status and prognosis in head and neck cancer"
+# Code for "Cell type-specific expression inferred from H&E predicts HPV and prognosis in head and neck cancer"
 
 ## What is here
 
